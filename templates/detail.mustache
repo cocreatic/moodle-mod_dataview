@@ -1,0 +1,61 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template mod_dataview/detail
+
+    This template renders the template for a resource.
+
+    Example context (json):
+    {}
+}}
+
+<div class="panel panel-default metodologia-detalle">
+    <h2>{{nombre}}</h2>
+    <div>
+        <div class="imagen">
+            {{#portada}}
+                {{{portada}}}
+            {{/portada}}
+        </div>
+        <div class="detalles">
+            <p><strong>Modalidad: </strong> {{{modalidad}}}</p>
+            <p><strong>Granularidad: </strong> {{{granularidad}}}</p>
+            <p><strong>Metodología: </strong> {{{metodologia}}}</p>
+            <p><strong>Nivel: </strong> {{{nivel}}}</p>
+            <p><strong>Estilos: </strong> {{{estilo}}}</p>
+            <p><strong>Tipo: </strong> {{{formal}}}</p>
+            {{#plantilla}}
+                <p><strong>Plantilla de curso: </strong> {{{plantilla}}}</p>
+            {{/plantilla}}
+
+            {{#cancreatetepuy}}
+                {{#plantillaboa}}
+                    <p>
+                        <strong>Crear como objeto: </strong>
+                        <a href="{{wwwroot}}/blocks/tepuyeditor/index.php?tpl={{plantillaboa}}" data-operation="confirmgo" class="btn btn-default">
+                            Ir al editor de Tepuy
+                        </a>
+                    </p>
+                {{/plantillaboa}}
+            {{/cancreatetepuy}}
+        </div>
+    </div>
+    <div class="descripcion">
+        <h4>Descripción:</h4>
+        {{{descripcion}}}
+    </div>
+</div>
