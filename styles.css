@@ -54,3 +54,23 @@
 .dataview-board .search-box {
     padding: 0 10px 10px 0;
 }
+
+.dataview-board .filter-body .option {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.dataview-board .filter-body .option:hover {
+    background: var(--color-bg-third);
+    color: var(--color-cont-third);
+}
+
+.dataview-board .filter-body .option label {
+    width: 100%;
+    padding: 5px 0;
+}
+
+.dataview-board .filter-body .option label:hover {
+    cursor: pointer;
+}

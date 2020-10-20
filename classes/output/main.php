@@ -76,6 +76,17 @@ class main implements renderable, templatable {
                     $control = $this->get_searchcontrol($one, $data, $cm);
 
                     if ($control) {
+                        if ($one->type == 'checkbox') {
+                            $slides = explode('<br />', $control);
+
+                            // Remove the "select all" option.
+                            array_pop($slides);
+
+                            $control = '<div class="option">' .
+                                            implode('</div><div class="option">', $slides) .
+                                        '</div>';
+                        }
+
                         $finalfields[] = $one;
                         $one->control = $control;
                     }

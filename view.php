@@ -25,7 +25,6 @@
 
 require('../../config.php');
 require_once('lib.php');
-require_once('locallib.php');
 require_once('classes/output/renderer.php');
 require_once('classes/output/main.php');
 
