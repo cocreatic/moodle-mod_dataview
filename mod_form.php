@@ -80,7 +80,7 @@ class mod_dataview_mod_form extends moodleform_mod {
 
 //-------------------------------------------------------------------------------
 // General buttons.
-        $this->add_action_buttons(true, false, null);
+        $this->add_action_buttons();
 
     }
 
